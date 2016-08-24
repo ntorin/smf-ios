@@ -1,0 +1,6 @@
+framework module Pods_SMFTests {
+  umbrella header "Pods-SMFTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
