@@ -18,6 +18,11 @@
 		F190E1641D6535210084108A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F190E1621D6535210084108A /* LaunchScreen.storyboard */; };
 		F190E16F1D6535210084108A /* SMFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190E16E1D6535210084108A /* SMFTests.swift */; };
 		F190E17A1D6535210084108A /* SMFUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190E1791D6535210084108A /* SMFUITests.swift */; };
+		F1CE2A921D97B01500B0BD31 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CE2A911D97B01500B0BD31 /* SWRevealViewController.m */; };
+		F1CE2A941D98B3A000B0BD31 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CE2A931D98B3A000B0BD31 /* FeedTableViewController.swift */; };
+		F1CE2A961D98E99C00B0BD31 /* ProfileUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CE2A951D98E99C00B0BD31 /* ProfileUIViewController.swift */; };
+		F1CE2A981D98E9AE00B0BD31 /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CE2A971D98E9AE00B0BD31 /* GroupsTableViewController.swift */; };
+		F1CE2A9A1D98E9BD00B0BD31 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CE2A991D98E9BD00B0BD31 /* MessagesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,13 @@
 		F190E1751D6535210084108A /* SMFUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMFUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F190E1791D6535210084108A /* SMFUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMFUITests.swift; sourceTree = "<group>"; };
 		F190E17B1D6535210084108A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1CE2A8F1D97B01400B0BD31 /* SMF-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMF-Bridging-Header.h"; sourceTree = "<group>"; };
+		F1CE2A901D97B01500B0BD31 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
+		F1CE2A911D97B01500B0BD31 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
+		F1CE2A931D98B3A000B0BD31 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		F1CE2A951D98E99C00B0BD31 /* ProfileUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUIViewController.swift; sourceTree = "<group>"; };
+		F1CE2A971D98E9AE00B0BD31 /* GroupsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
+		F1CE2A991D98E9BD00B0BD31 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +129,7 @@
 		F190E14D1D6535210084108A = {
 			isa = PBXGroup;
 			children = (
+				F1CE2A8E1D97AF6700B0BD31 /* SWRevealViewController */,
 				F190E1581D6535210084108A /* SMF */,
 				F190E16D1D6535210084108A /* SMFTests */,
 				F190E1781D6535210084108A /* SMFUITests */,
@@ -146,6 +159,10 @@
 				F190E1601D6535210084108A /* Assets.xcassets */,
 				F190E1621D6535210084108A /* LaunchScreen.storyboard */,
 				F190E1651D6535210084108A /* Info.plist */,
+				F1CE2A931D98B3A000B0BD31 /* FeedTableViewController.swift */,
+				F1CE2A951D98E99C00B0BD31 /* ProfileUIViewController.swift */,
+				F1CE2A971D98E9AE00B0BD31 /* GroupsTableViewController.swift */,
+				F1CE2A991D98E9BD00B0BD31 /* MessagesTableViewController.swift */,
 			);
 			path = SMF;
 			sourceTree = "<group>";
@@ -166,6 +183,16 @@
 				F190E17B1D6535210084108A /* Info.plist */,
 			);
 			path = SMFUITests;
+			sourceTree = "<group>";
+		};
+		F1CE2A8E1D97AF6700B0BD31 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F1CE2A8F1D97B01400B0BD31 /* SMF-Bridging-Header.h */,
+				F1CE2A901D97B01500B0BD31 /* SWRevealViewController.h */,
+				F1CE2A911D97B01500B0BD31 /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,13 +271,16 @@
 				TargetAttributes = {
 					F190E1551D6535210084108A = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					F190E1691D6535210084108A = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F190E1551D6535210084108A;
 					};
 					F190E1741D6535210084108A = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F190E1551D6535210084108A;
 					};
 				};
@@ -433,6 +463,11 @@
 			files = (
 				F190E15C1D6535210084108A /* ViewController.swift in Sources */,
 				F190E15A1D6535210084108A /* AppDelegate.swift in Sources */,
+				F1CE2A9A1D98E9BD00B0BD31 /* MessagesTableViewController.swift in Sources */,
+				F1CE2A961D98E99C00B0BD31 /* ProfileUIViewController.swift in Sources */,
+				F1CE2A921D97B01500B0BD31 /* SWRevealViewController.m in Sources */,
+				F1CE2A941D98B3A000B0BD31 /* FeedTableViewController.swift in Sources */,
+				F1CE2A981D98E9AE00B0BD31 /* GroupsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,10 +610,14 @@
 			baseConfigurationReference = 3985420185A4850C46CD234F /* Pods-SMF.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SMF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inami.SMF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SMF-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -587,10 +626,13 @@
 			baseConfigurationReference = 4156CA6C1346DC2579C6A1A0 /* Pods-SMF.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SMF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inami.SMF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SMF-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -603,6 +645,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inami.SMFTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMF.app/SMF";
 			};
 			name = Debug;
@@ -616,6 +659,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inami.SMFTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMF.app/SMF";
 			};
 			name = Release;
@@ -628,6 +672,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inami.SMFUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SMF;
 			};
 			name = Debug;
@@ -640,6 +685,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inami.SMFUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SMF;
 			};
 			name = Release;
