@@ -11,6 +11,7 @@
 		6667204288DF992A7921447D /* Pods_SMFUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756CD72021ECD8B69000EB75 /* Pods_SMFUITests.framework */; };
 		CCFD926798450FB575BD84BD /* Pods_SMFTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 982E96723137AC80B5F0A188 /* Pods_SMFTests.framework */; };
 		F10926CD1D65808000A15FCF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F10926CC1D65808000A15FCF /* GoogleService-Info.plist */; };
+		F11F4FC11D9FDBAC0030B176 /* LoginUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F4FC01D9FDBAC0030B176 /* LoginUIViewController.swift */; };
 		F190E15A1D6535210084108A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190E1591D6535210084108A /* AppDelegate.swift */; };
 		F190E15C1D6535210084108A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190E15B1D6535210084108A /* ViewController.swift */; };
 		F190E15F1D6535210084108A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F190E15D1D6535210084108A /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		C2F4BBCC6767BAEBF2D176C3 /* Pods-SMFTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMFTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMFTests/Pods-SMFTests.release.xcconfig"; sourceTree = "<group>"; };
 		C5FEAFBBBA8AC4704CD4B0EB /* Pods-SMFTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMFTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMFTests/Pods-SMFTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F10926CC1D65808000A15FCF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F11F4FC01D9FDBAC0030B176 /* LoginUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUIViewController.swift; sourceTree = "<group>"; };
 		F190E1561D6535210084108A /* SMF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F190E1591D6535210084108A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F190E15B1D6535210084108A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				F1CE2A951D98E99C00B0BD31 /* ProfileUIViewController.swift */,
 				F1CE2A971D98E9AE00B0BD31 /* GroupsTableViewController.swift */,
 				F1CE2A991D98E9BD00B0BD31 /* MessagesTableViewController.swift */,
+				F11F4FC01D9FDBAC0030B176 /* LoginUIViewController.swift */,
 			);
 			path = SMF;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				F190E15A1D6535210084108A /* AppDelegate.swift in Sources */,
 				F1CE2A9A1D98E9BD00B0BD31 /* MessagesTableViewController.swift in Sources */,
 				F1CE2A961D98E99C00B0BD31 /* ProfileUIViewController.swift in Sources */,
+				F11F4FC11D9FDBAC0030B176 /* LoginUIViewController.swift in Sources */,
 				F1CE2A921D97B01500B0BD31 /* SWRevealViewController.m in Sources */,
 				F1CE2A941D98B3A000B0BD31 /* FeedTableViewController.swift in Sources */,
 				F1CE2A981D98E9AE00B0BD31 /* GroupsTableViewController.swift in Sources */,
