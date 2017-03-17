@@ -30,6 +30,8 @@ class LoginUIViewController: UIViewController {
             if error != nil {
                 print(error?.localizedDescription)
             }else{
+                let ref = FIRDatabase.database().reference()
+                ref.child("users").child((user?.uid)!).setValue(["email" : "test"])
                 self.movetoHome()
             }
         }

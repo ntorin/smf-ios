@@ -12,6 +12,9 @@
 		CCFD926798450FB575BD84BD /* Pods_SMFTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 982E96723137AC80B5F0A188 /* Pods_SMFTests.framework */; };
 		F10926CD1D65808000A15FCF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F10926CC1D65808000A15FCF /* GoogleService-Info.plist */; };
 		F11F4FC11D9FDBAC0030B176 /* LoginUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F4FC01D9FDBAC0030B176 /* LoginUIViewController.swift */; };
+		F13489D81E7BBB33005008ED /* ThreadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13489D71E7BBB33005008ED /* ThreadTableViewController.swift */; };
+		F13489DC1E7BF383005008ED /* ThreadPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13489DB1E7BF383005008ED /* ThreadPreview.swift */; };
+		F13489DE1E7BFD2F005008ED /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13489DD1E7BFD2F005008ED /* Post.swift */; };
 		F190E15A1D6535210084108A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190E1591D6535210084108A /* AppDelegate.swift */; };
 		F190E15C1D6535210084108A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190E15B1D6535210084108A /* ViewController.swift */; };
 		F190E15F1D6535210084108A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F190E15D1D6535210084108A /* Main.storyboard */; };
@@ -19,6 +22,9 @@
 		F190E1641D6535210084108A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F190E1621D6535210084108A /* LaunchScreen.storyboard */; };
 		F190E16F1D6535210084108A /* SMFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190E16E1D6535210084108A /* SMFTests.swift */; };
 		F190E17A1D6535210084108A /* SMFUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190E1791D6535210084108A /* SMFUITests.swift */; };
+		F19B79BE1E7A79F500E2CA55 /* BBSTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B79BD1E7A79F500E2CA55 /* BBSTableViewController.swift */; };
+		F1BC3A601E7B34CA0077A7F9 /* CustomUISplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC3A5F1E7B34CA0077A7F9 /* CustomUISplitViewController.swift */; };
+		F1C4821C1E7A26B60094A1F5 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C4821B1E7A26B60094A1F5 /* MenuTableViewController.swift */; };
 		F1CE2A921D97B01500B0BD31 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CE2A911D97B01500B0BD31 /* SWRevealViewController.m */; };
 		F1CE2A941D98B3A000B0BD31 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CE2A931D98B3A000B0BD31 /* FeedTableViewController.swift */; };
 		F1CE2A961D98E99C00B0BD31 /* ProfileUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CE2A951D98E99C00B0BD31 /* ProfileUIViewController.swift */; };
@@ -55,6 +61,9 @@
 		C5FEAFBBBA8AC4704CD4B0EB /* Pods-SMFTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMFTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMFTests/Pods-SMFTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F10926CC1D65808000A15FCF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F11F4FC01D9FDBAC0030B176 /* LoginUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUIViewController.swift; sourceTree = "<group>"; };
+		F13489D71E7BBB33005008ED /* ThreadTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadTableViewController.swift; sourceTree = "<group>"; };
+		F13489DB1E7BF383005008ED /* ThreadPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadPreview.swift; sourceTree = "<group>"; };
+		F13489DD1E7BFD2F005008ED /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F190E1561D6535210084108A /* SMF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F190E1591D6535210084108A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F190E15B1D6535210084108A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +77,9 @@
 		F190E1751D6535210084108A /* SMFUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMFUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F190E1791D6535210084108A /* SMFUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMFUITests.swift; sourceTree = "<group>"; };
 		F190E17B1D6535210084108A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F19B79BD1E7A79F500E2CA55 /* BBSTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBSTableViewController.swift; sourceTree = "<group>"; };
+		F1BC3A5F1E7B34CA0077A7F9 /* CustomUISplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUISplitViewController.swift; sourceTree = "<group>"; };
+		F1C4821B1E7A26B60094A1F5 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		F1CE2A8F1D97B01400B0BD31 /* SMF-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMF-Bridging-Header.h"; sourceTree = "<group>"; };
 		F1CE2A901D97B01500B0BD31 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
 		F1CE2A911D97B01500B0BD31 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
@@ -166,6 +178,12 @@
 				F1CE2A971D98E9AE00B0BD31 /* GroupsTableViewController.swift */,
 				F1CE2A991D98E9BD00B0BD31 /* MessagesTableViewController.swift */,
 				F11F4FC01D9FDBAC0030B176 /* LoginUIViewController.swift */,
+				F1C4821B1E7A26B60094A1F5 /* MenuTableViewController.swift */,
+				F19B79BD1E7A79F500E2CA55 /* BBSTableViewController.swift */,
+				F1BC3A5F1E7B34CA0077A7F9 /* CustomUISplitViewController.swift */,
+				F13489D71E7BBB33005008ED /* ThreadTableViewController.swift */,
+				F13489DB1E7BF383005008ED /* ThreadPreview.swift */,
+				F13489DD1E7BFD2F005008ED /* Post.swift */,
 			);
 			path = SMF;
 			sourceTree = "<group>";
@@ -464,14 +482,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F13489DC1E7BF383005008ED /* ThreadPreview.swift in Sources */,
 				F190E15C1D6535210084108A /* ViewController.swift in Sources */,
+				F1C4821C1E7A26B60094A1F5 /* MenuTableViewController.swift in Sources */,
 				F190E15A1D6535210084108A /* AppDelegate.swift in Sources */,
 				F1CE2A9A1D98E9BD00B0BD31 /* MessagesTableViewController.swift in Sources */,
+				F13489DE1E7BFD2F005008ED /* Post.swift in Sources */,
+				F1BC3A601E7B34CA0077A7F9 /* CustomUISplitViewController.swift in Sources */,
+				F13489D81E7BBB33005008ED /* ThreadTableViewController.swift in Sources */,
 				F1CE2A961D98E99C00B0BD31 /* ProfileUIViewController.swift in Sources */,
 				F11F4FC11D9FDBAC0030B176 /* LoginUIViewController.swift in Sources */,
 				F1CE2A921D97B01500B0BD31 /* SWRevealViewController.m in Sources */,
 				F1CE2A941D98B3A000B0BD31 /* FeedTableViewController.swift in Sources */,
 				F1CE2A981D98E9AE00B0BD31 /* GroupsTableViewController.swift in Sources */,
+				F19B79BE1E7A79F500E2CA55 /* BBSTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
