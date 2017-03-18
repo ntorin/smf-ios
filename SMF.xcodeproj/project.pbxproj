@@ -15,6 +15,9 @@
 		F13489D81E7BBB33005008ED /* ThreadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13489D71E7BBB33005008ED /* ThreadTableViewController.swift */; };
 		F13489DC1E7BF383005008ED /* ThreadPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13489DB1E7BF383005008ED /* ThreadPreview.swift */; };
 		F13489DE1E7BFD2F005008ED /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13489DD1E7BFD2F005008ED /* Post.swift */; };
+		F13489E01E7D42EA005008ED /* CreateThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13489DF1E7D42EA005008ED /* CreateThreadViewController.swift */; };
+		F13489E21E7D42FE005008ED /* ReplyThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13489E11E7D42FE005008ED /* ReplyThreadViewController.swift */; };
+		F13489E41E7D4312005008ED /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13489E31E7D4312005008ED /* EditProfileViewController.swift */; };
 		F190E15A1D6535210084108A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190E1591D6535210084108A /* AppDelegate.swift */; };
 		F190E15C1D6535210084108A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190E15B1D6535210084108A /* ViewController.swift */; };
 		F190E15F1D6535210084108A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F190E15D1D6535210084108A /* Main.storyboard */; };
@@ -64,6 +67,9 @@
 		F13489D71E7BBB33005008ED /* ThreadTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadTableViewController.swift; sourceTree = "<group>"; };
 		F13489DB1E7BF383005008ED /* ThreadPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadPreview.swift; sourceTree = "<group>"; };
 		F13489DD1E7BFD2F005008ED /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		F13489DF1E7D42EA005008ED /* CreateThreadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateThreadViewController.swift; sourceTree = "<group>"; };
+		F13489E11E7D42FE005008ED /* ReplyThreadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplyThreadViewController.swift; sourceTree = "<group>"; };
+		F13489E31E7D4312005008ED /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		F190E1561D6535210084108A /* SMF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F190E1591D6535210084108A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F190E15B1D6535210084108A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +190,9 @@
 				F13489D71E7BBB33005008ED /* ThreadTableViewController.swift */,
 				F13489DB1E7BF383005008ED /* ThreadPreview.swift */,
 				F13489DD1E7BFD2F005008ED /* Post.swift */,
+				F13489DF1E7D42EA005008ED /* CreateThreadViewController.swift */,
+				F13489E11E7D42FE005008ED /* ReplyThreadViewController.swift */,
+				F13489E31E7D4312005008ED /* EditProfileViewController.swift */,
 			);
 			path = SMF;
 			sourceTree = "<group>";
@@ -492,8 +501,11 @@
 				F13489D81E7BBB33005008ED /* ThreadTableViewController.swift in Sources */,
 				F1CE2A961D98E99C00B0BD31 /* ProfileUIViewController.swift in Sources */,
 				F11F4FC11D9FDBAC0030B176 /* LoginUIViewController.swift in Sources */,
+				F13489E41E7D4312005008ED /* EditProfileViewController.swift in Sources */,
+				F13489E01E7D42EA005008ED /* CreateThreadViewController.swift in Sources */,
 				F1CE2A921D97B01500B0BD31 /* SWRevealViewController.m in Sources */,
 				F1CE2A941D98B3A000B0BD31 /* FeedTableViewController.swift in Sources */,
+				F13489E21E7D42FE005008ED /* ReplyThreadViewController.swift in Sources */,
 				F1CE2A981D98E9AE00B0BD31 /* GroupsTableViewController.swift in Sources */,
 				F19B79BE1E7A79F500E2CA55 /* BBSTableViewController.swift in Sources */,
 			);

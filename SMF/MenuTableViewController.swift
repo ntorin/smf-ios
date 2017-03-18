@@ -24,5 +24,21 @@ class MenuTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let revealController = self.revealViewController()
+        print("selected row; \(indexPath.section), \(indexPath.row)")
+        if(indexPath.section == 0 && indexPath.row == 0){ //BBS
+            let frontController = self.storyboard?.instantiateViewController(withIdentifier: "bbsVC")
+            revealController?.setFront(frontController, animated: true)
+        }
+        
+        if(indexPath.section == 0 && indexPath.row == 1){ //Personal/Home
+            let frontController = self.storyboard?.instantiateViewController(withIdentifier: "homeVC")
+            revealController?.setFront(frontController, animated: true)
+        }
+        
+        revealController?.revealToggle(animated: true)
+    }
 
 }

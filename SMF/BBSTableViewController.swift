@@ -12,6 +12,9 @@ import FirebaseAuth
 
 class BBSTableViewController: UITableViewController {
     
+    
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     var database:FIRDatabaseReference!
     var uid = FIRAuth.auth()?.currentUser?.uid
     var keys = [String]()
@@ -21,12 +24,19 @@ class BBSTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         
         database = FIRDatabase.database().reference()
         database.child("threads").observe(FIRDataEventType.childAdded, with: { (snapshot) in
