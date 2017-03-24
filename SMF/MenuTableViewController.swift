@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MenuTableViewController: UITableViewController {
 
@@ -36,6 +37,11 @@ class MenuTableViewController: UITableViewController {
         if(indexPath.section == 0 && indexPath.row == 1){ //Personal/Home
             let frontController = self.storyboard?.instantiateViewController(withIdentifier: "homeVC")
             revealController?.setFront(frontController, animated: true)
+        }
+        
+        if(indexPath.section == 2 && indexPath.row == 1){ //Sign Out
+            try! FIRAuth.auth()!.signOut()
+            self.performSegue(withIdentifier: "logout", sender: self)
         }
         
         revealController?.revealToggle(animated: true)

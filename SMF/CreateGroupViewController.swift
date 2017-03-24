@@ -1,8 +1,8 @@
 //
-//  CreateThreadViewController.swift
+//  CreateGroupViewController.swift
 //  SMF
 //
-//  Created by Iris Inami on 2017-03-18.
+//  Created by Iris Inami on 2017-03-23.
 //  Copyright © 2017 Iris Inami. All rights reserved.
 //
 
@@ -10,12 +10,13 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class CreateThreadViewController: UIViewController {
+class CreateGroupViewController: UIViewController {
 
+    @IBOutlet weak var groupNameText: UITextField!
+    @IBOutlet weak var groupidText: UITextField!
+    @IBOutlet weak var groupDescriptionText: UITextField!
+    @IBOutlet weak var groupTagsText: UITextField!
     
-    @IBOutlet weak var titleText: UITextField!
-    @IBOutlet weak var bodyText: UITextField!
-    @IBOutlet weak var tagsText: UITextField!
     
     
     var database:FIRDatabaseReference!
@@ -25,7 +26,6 @@ class CreateThreadViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         database = FIRDatabase.database().reference()
     }
 
@@ -34,31 +34,28 @@ class CreateThreadViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func createThread(_ sender: AnyObject) {
-        print("pressed createThread")
-        
+    @IBAction func createGroup(_ sender: AnyObject) {
         let alert = UIAlertController(title: "Confirmation", message: "Are you sure you would like to create this thread?", preferredStyle: UIAlertControllerStyle.alert)
         
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in
-            let thread:FIRDatabaseReference = self.database.child("threads").childByAutoId()
-            let threadid:String = thread.key
-            let tags = self.tagsText.text?.replacingOccurrences(of: " ", with: "").components(separatedBy: ",")
+            let group = self.database.child("groups").childByAutoId()
+            let key = group.key
             
-            self.database.child("threads").child(threadid).child("userid").setValue(self.uid)
-            self.database.child("threads").child(threadid).child("threadtitle").setValue(self.titleText.text)
+            let tags = self.groupTagsText.text?.replacingOccurrences(of: " ", with: "").components(separatedBy: ",")
+            
+            self.database.child("groups").child(key).child("groupname").setValue(self.groupNameText.text)
+            self.database.child("groups").child(key).child("groupscreenid").setValue(self.groupidText.text)
+            self.database.child("groups").child(key).child("creatorid").setValue(self.uid)
+            self.database.child("groups").child(key).child("groupshortdescription").setValue(self.groupDescriptionText.text)
+            self.database.child("groups").child(key).child("membercount").setValue(0)
+            self.database.child("groups").child(key).child("postcount").setValue(0)
             
             for(tag) in tags!{
-                self.database.child("threads").child(threadid).child("threadtags").child(tag).setValue(true)
+                self.database.child("groups").child(key).child("grouptags").child(tag).setValue(true)
             }
             
-            let post:FIRDatabaseReference = self.database.child("posts").child(threadid).childByAutoId()
-            let postid:String = post.key
-            
-            self.database.child("posts").child(threadid).child(postid).child("userid").setValue(self.uid)
-            self.database.child("posts").child(threadid).child(postid).child("content").setValue(self.bodyText.text)
             let timestamp:Int = Int(Date().timeIntervalSince1970)
-            self.database.child("threads").child(threadid).child("unixstamp").setValue(timestamp)
-            self.database.child("posts").child(threadid).child(postid).child("unixstamp").setValue(timestamp)
+            self.database.child("groups").child(key).child("unixstamp").setValue(timestamp)
             
             self.navigationController?.popViewController(animated: true)
         }));
@@ -68,6 +65,7 @@ class CreateThreadViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
+    
     
 
     /*

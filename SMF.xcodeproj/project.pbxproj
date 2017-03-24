@@ -18,6 +18,13 @@
 		F13489E01E7D42EA005008ED /* CreateThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13489DF1E7D42EA005008ED /* CreateThreadViewController.swift */; };
 		F13489E21E7D42FE005008ED /* ReplyThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13489E11E7D42FE005008ED /* ReplyThreadViewController.swift */; };
 		F13489E41E7D4312005008ED /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13489E31E7D4312005008ED /* EditProfileViewController.swift */; };
+		F13509DC1E849E3600804BE0 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13509DB1E849E3600804BE0 /* CreateGroupViewController.swift */; };
+		F13509DE1E849EFE00804BE0 /* ShowGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13509DD1E849EFE00804BE0 /* ShowGroupViewController.swift */; };
+		F13509E01E849F0D00804BE0 /* CreateMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13509DF1E849F0D00804BE0 /* CreateMessageViewController.swift */; };
+		F13509E21E849F2A00804BE0 /* ShowMessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13509E11E849F2A00804BE0 /* ShowMessageTableViewController.swift */; };
+		F13509E41E85196600804BE0 /* GroupPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13509E31E85196600804BE0 /* GroupPreview.swift */; };
+		F13509E61E85286000804BE0 /* MessagePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13509E51E85286000804BE0 /* MessagePreview.swift */; };
+		F13509E81E8541D100804BE0 /* ReplyMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13509E71E8541D100804BE0 /* ReplyMessageViewController.swift */; };
 		F190E15A1D6535210084108A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190E1591D6535210084108A /* AppDelegate.swift */; };
 		F190E15C1D6535210084108A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190E15B1D6535210084108A /* ViewController.swift */; };
 		F190E15F1D6535210084108A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F190E15D1D6535210084108A /* Main.storyboard */; };
@@ -70,6 +77,13 @@
 		F13489DF1E7D42EA005008ED /* CreateThreadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateThreadViewController.swift; sourceTree = "<group>"; };
 		F13489E11E7D42FE005008ED /* ReplyThreadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplyThreadViewController.swift; sourceTree = "<group>"; };
 		F13489E31E7D4312005008ED /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		F13509DB1E849E3600804BE0 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
+		F13509DD1E849EFE00804BE0 /* ShowGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowGroupViewController.swift; sourceTree = "<group>"; };
+		F13509DF1E849F0D00804BE0 /* CreateMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMessageViewController.swift; sourceTree = "<group>"; };
+		F13509E11E849F2A00804BE0 /* ShowMessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMessageTableViewController.swift; sourceTree = "<group>"; };
+		F13509E31E85196600804BE0 /* GroupPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupPreview.swift; sourceTree = "<group>"; };
+		F13509E51E85286000804BE0 /* MessagePreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePreview.swift; sourceTree = "<group>"; };
+		F13509E71E8541D100804BE0 /* ReplyMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplyMessageViewController.swift; sourceTree = "<group>"; };
 		F190E1561D6535210084108A /* SMF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F190E1591D6535210084108A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F190E15B1D6535210084108A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +207,13 @@
 				F13489DF1E7D42EA005008ED /* CreateThreadViewController.swift */,
 				F13489E11E7D42FE005008ED /* ReplyThreadViewController.swift */,
 				F13489E31E7D4312005008ED /* EditProfileViewController.swift */,
+				F13509DB1E849E3600804BE0 /* CreateGroupViewController.swift */,
+				F13509DD1E849EFE00804BE0 /* ShowGroupViewController.swift */,
+				F13509DF1E849F0D00804BE0 /* CreateMessageViewController.swift */,
+				F13509E11E849F2A00804BE0 /* ShowMessageTableViewController.swift */,
+				F13509E31E85196600804BE0 /* GroupPreview.swift */,
+				F13509E51E85286000804BE0 /* MessagePreview.swift */,
+				F13509E71E8541D100804BE0 /* ReplyMessageViewController.swift */,
 			);
 			path = SMF;
 			sourceTree = "<group>";
@@ -493,9 +514,11 @@
 			files = (
 				F13489DC1E7BF383005008ED /* ThreadPreview.swift in Sources */,
 				F190E15C1D6535210084108A /* ViewController.swift in Sources */,
+				F13509E61E85286000804BE0 /* MessagePreview.swift in Sources */,
 				F1C4821C1E7A26B60094A1F5 /* MenuTableViewController.swift in Sources */,
 				F190E15A1D6535210084108A /* AppDelegate.swift in Sources */,
 				F1CE2A9A1D98E9BD00B0BD31 /* MessagesTableViewController.swift in Sources */,
+				F13509E21E849F2A00804BE0 /* ShowMessageTableViewController.swift in Sources */,
 				F13489DE1E7BFD2F005008ED /* Post.swift in Sources */,
 				F1BC3A601E7B34CA0077A7F9 /* CustomUISplitViewController.swift in Sources */,
 				F13489D81E7BBB33005008ED /* ThreadTableViewController.swift in Sources */,
@@ -503,10 +526,15 @@
 				F11F4FC11D9FDBAC0030B176 /* LoginUIViewController.swift in Sources */,
 				F13489E41E7D4312005008ED /* EditProfileViewController.swift in Sources */,
 				F13489E01E7D42EA005008ED /* CreateThreadViewController.swift in Sources */,
+				F13509E81E8541D100804BE0 /* ReplyMessageViewController.swift in Sources */,
+				F13509DE1E849EFE00804BE0 /* ShowGroupViewController.swift in Sources */,
 				F1CE2A921D97B01500B0BD31 /* SWRevealViewController.m in Sources */,
 				F1CE2A941D98B3A000B0BD31 /* FeedTableViewController.swift in Sources */,
+				F13509DC1E849E3600804BE0 /* CreateGroupViewController.swift in Sources */,
+				F13509E01E849F0D00804BE0 /* CreateMessageViewController.swift in Sources */,
 				F13489E21E7D42FE005008ED /* ReplyThreadViewController.swift in Sources */,
 				F1CE2A981D98E9AE00B0BD31 /* GroupsTableViewController.swift in Sources */,
+				F13509E41E85196600804BE0 /* GroupPreview.swift in Sources */,
 				F19B79BE1E7A79F500E2CA55 /* BBSTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

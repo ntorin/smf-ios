@@ -44,6 +44,8 @@ class BBSTableViewController: UITableViewController {
             self.keys.append(key)
             
             let thread:ThreadPreview = ThreadPreview.init()
+            if(snapshot.childSnapshot(forPath: "unixstamp").value as? Double != nil){
+            print("\(snapshot.childSnapshot(forPath: "unixstamp").value)")
             thread.threadid = key
             thread.threadtitle = snapshot.childSnapshot(forPath: "threadtitle").value as! String!
             thread.unixstamp = snapshot.childSnapshot(forPath: "unixstamp").value as! Double!
@@ -53,10 +55,34 @@ class BBSTableViewController: UITableViewController {
                 
                 thread.threadtags.append((tag as AnyObject).key)
             }
+            }
             
             self.threads.append(thread)
             let indexPath = IndexPath(row: self.keys.count - 1, section: 0)
             self.tableView.insertRows(at: [indexPath], with: .fade)
+        })
+        
+        database.child("threads").observe(FIRDataEventType.childChanged, with: { (snapshot) in
+            let key = snapshot.key
+            let idx = self.keys.index(of: key)
+            
+            let thread:ThreadPreview = ThreadPreview.init()
+            let timestamp = snapshot.childSnapshot(forPath: "unixstamp").value as? Double
+            if(timestamp != nil){
+                thread.threadid = key
+                thread.threadtitle = snapshot.childSnapshot(forPath: "threadtitle").value as! String!
+                thread.unixstamp = timestamp
+                thread.opid = snapshot.childSnapshot(forPath: "userid").value as! String!
+                
+                for tag in snapshot.childSnapshot(forPath: "threadtags").children{
+                    
+                    thread.threadtags.append((tag as AnyObject).key)
+                }
+                
+                self.threads[idx!] = thread
+                self.tableView.reloadData()
+            }
+            
         })
     }
 
@@ -96,6 +122,7 @@ class BBSTableViewController: UITableViewController {
                 let controller = (segue.destination as! UINavigationController).topViewController as! ThreadTableViewController
                 controller.threadid = tid
                 controller.threadtitle = threadtitle
+                controller.navigationItem.title = threadtitle
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }

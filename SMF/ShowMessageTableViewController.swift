@@ -1,16 +1,16 @@
 //
-//  ThreadTableViewController.swift
+//  ShowMessageTableViewController.swift
 //  SMF
 //
-//  Created by Iris Inami on 2017-03-16.
+//  Created by Iris Inami on 2017-03-23.
 //  Copyright © 2017 Iris Inami. All rights reserved.
 //
 
 import UIKit
-import FirebaseDatabase
 import FirebaseAuth
+import FirebaseDatabase
 
-class ThreadTableViewController: UITableViewController {
+class ShowMessageTableViewController: UITableViewController {
 
     var database:FIRDatabaseReference!
     var uid = FIRAuth.auth()?.currentUser?.uid
@@ -27,10 +27,10 @@ class ThreadTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
@@ -44,16 +44,16 @@ class ThreadTableViewController: UITableViewController {
             let post:Post = Post.init()
             let timestamp = snapshot.childSnapshot(forPath: "unixstamp").value as? Double
             if(timestamp != nil){
-            post.content = snapshot.childSnapshot(forPath: "content").value as! String!
-            post.userid = snapshot.childSnapshot(forPath: "userid").value as! String!
-            post.unixstamp = snapshot.childSnapshot(forPath: "unixstamp").value as! Double!
-            post.postid = key
+                post.content = snapshot.childSnapshot(forPath: "content").value as! String!
+                post.userid = snapshot.childSnapshot(forPath: "userid").value as! String!
+                post.unixstamp = snapshot.childSnapshot(forPath: "unixstamp").value as! Double!
+                post.postid = key
             }
             
             self.posts.append(post)
             if(timestamp != nil){
-            let indexPath = IndexPath(row: self.keys.count - 1, section:0)
-            self.tableView.insertRows(at: [indexPath], with: .fade)
+                let indexPath = IndexPath(row: self.keys.count - 1, section:0)
+                self.tableView.insertRows(at: [indexPath], with: .fade)
             }
             
         })
@@ -85,19 +85,19 @@ class ThreadTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return keys.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "post", for: indexPath)
@@ -116,54 +116,53 @@ class ThreadTableViewController: UITableViewController {
         return cell
     }
     
-
+    
     /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
+     // Override to support conditional editing of the table view.
+     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the specified item to be editable.
+     return true
+     }
+     */
+    
     /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
+     // Override to support editing the table view.
+     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+     if editingStyle == .delete {
+     // Delete the row from the data source
+     tableView.deleteRows(at: [indexPath], with: .fade)
+     } else if editingStyle == .insert {
+     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+     }
+     }
+     */
+    
     /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
+     // Override to support rearranging the table view.
+     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+     
+     }
+     */
+    
     /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
+     // Override to support conditional rearranging of the table view.
+     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
+    
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if(segue.identifier == "replyThread"){
-            let vc = segue.destination as! ReplyThreadViewController
+        if(segue.identifier == "replyMessage"){
+            let vc = segue.destination as! ReplyMessageViewController
             vc.threadid = self.threadid
         }
-    }
- 
 
+}
 }
