@@ -208,8 +208,8 @@
 				F13489E11E7D42FE005008ED /* ReplyThreadViewController.swift */,
 				F13489E31E7D4312005008ED /* EditProfileViewController.swift */,
 				F13509DB1E849E3600804BE0 /* CreateGroupViewController.swift */,
-				F13509DD1E849EFE00804BE0 /* ShowGroupViewController.swift */,
 				F13509DF1E849F0D00804BE0 /* CreateMessageViewController.swift */,
+				F13509DD1E849EFE00804BE0 /* ShowGroupViewController.swift */,
 				F13509E11E849F2A00804BE0 /* ShowMessageTableViewController.swift */,
 				F13509E31E85196600804BE0 /* GroupPreview.swift */,
 				F13509E51E85286000804BE0 /* MessagePreview.swift */,
@@ -322,6 +322,7 @@
 				TargetAttributes = {
 					F190E1551D6535210084108A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = N6RP3H788Z;
 						LastSwiftMigration = 0800;
 					};
 					F190E1691D6535210084108A = {
@@ -684,6 +685,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = N6RP3H788Z;
 				INFOPLIST_FILE = SMF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inami.SMF;
@@ -700,6 +702,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = N6RP3H788Z;
 				INFOPLIST_FILE = SMF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inami.SMF;
