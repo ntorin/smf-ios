@@ -37,6 +37,7 @@ class ThreadTableViewController: UITableViewController {
         //self.navigationItem.title = threadtitle
         
         database = FIRDatabase.database().reference()
+        if(threadid != nil){
         database.child("posts").child(threadid).observe(FIRDataEventType.childAdded, with: { (snapshot) in
             let key = snapshot.key
             self.keys.append(key)
@@ -79,6 +80,7 @@ class ThreadTableViewController: UITableViewController {
                 self.tableView.insertRows(at: [indexPath], with: .fade)
             }
         })
+        }
     }
     
     override func didReceiveMemoryWarning() {
