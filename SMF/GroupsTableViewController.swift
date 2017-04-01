@@ -113,4 +113,13 @@ class GroupsTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //if segue.identifier == "showThread" {
+        if let indexPath = self.tableView.indexPathForSelectedRow {
+            let tid = keys[indexPath.row]
+            let controller = segue.destination as! ShowGroupViewController
+            controller.groupid = groups[indexPath.row].groupid
+        }
+    }
+    
 }
