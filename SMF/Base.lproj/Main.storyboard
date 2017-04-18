@@ -144,7 +144,7 @@
                                         <frame key="frameInset" minX="116" minY="157" width="204" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Recent Activity" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rNa-LD-2Ao">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Recent Activity" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNa-LD-2Ao">
                                         <frame key="frameInset" minX="116" minY="265" width="204" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -176,7 +176,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="196" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4TN-xi-wWQ" id="vaJ-XX-Me5">
-                                                    <frame key="frameInset" width="196" height="43.5"/>
+                                                    <frame key="frameInset" width="196" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -546,7 +546,7 @@
                                 <frame key="frameInset" minX="124" minY="223" width="180" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Recent Activity" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u1t-yb-3sv">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Recent Activity" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1t-yb-3sv">
                                 <frame key="frameInset" minX="124" minY="331" width="240" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -579,7 +579,7 @@
                                         <rect key="frame" x="0.0" y="28" width="180" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FJ2-D9-BDP" id="qJT-tf-tCU">
-                                            <frame key="frameInset" width="180" height="43.5"/>
+                                            <frame key="frameInset" width="180" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
