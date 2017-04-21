@@ -37,6 +37,7 @@ class ReplyThreadViewController: UIViewController {
         let alert = UIAlertController(title: "Confirmation", message: "Are you sure you would like to post this message?", preferredStyle: UIAlertControllerStyle.alert)
         
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in
+            if((self.bodyText.text?.characters.count)! > 0){
             let post:FIRDatabaseReference = self.database.child("posts").child(self.threadid).childByAutoId()
             let postid = post.key
             self.database.child("posts").child(self.threadid).child(postid).child("userid").setValue(self.uid)
@@ -45,6 +46,11 @@ class ReplyThreadViewController: UIViewController {
             self.database.child("posts").child(self.threadid).child(postid).child("unixstamp").setValue(timestamp)
             
             self.navigationController?.popViewController(animated: true)
+            }else{
+                let error = UIAlertController(title: "Incomplete", message: "Parts of the form were incomplete. Please make sure that all fields are filled out properly.", preferredStyle: UIAlertControllerStyle.alert)
+                error.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(error, animated:true, completion: nil)
+            }
         }));
         
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))

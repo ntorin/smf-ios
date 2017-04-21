@@ -37,13 +37,21 @@ class EditProfileViewController: UIViewController {
         let alert = UIAlertController(title: "Confirmation", message: "Are you sure you would like to update your account information?", preferredStyle: UIAlertControllerStyle.alert)
         
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in
+            if((self.screenNameText.text?.characters.count)! > 0){
+                self.database.child("users").child(self.uid!).child("screenname").setValue(self.screenNameText.text)
+            }
             
-            self.database.child("users").child(self.uid!).child("screenname").setValue(self.screenNameText.text)
-            self.database.child("users").child(self.uid!).child("accountid").setValue(self.accountidText.text)
-            self.database.child("users").child(self.uid!).child("shortdescription").setValue(self.descriptionText.text)
+            if((self.accountidText.text?.characters.count)! > 0){
+                self.database.child("users").child(self.uid!).child("accountid").setValue(self.accountidText.text)
+            }
+            
+            if((self.descriptionText.text?.characters.count)! > 0){
+                self.database.child("users").child(self.uid!).child("shortdescription").setValue(self.descriptionText.text)
+            }
             
             
             self.navigationController?.popViewController(animated: true)
+            //self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 2]
         }));
         
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))

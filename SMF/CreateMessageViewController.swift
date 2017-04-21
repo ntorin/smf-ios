@@ -44,7 +44,7 @@ class CreateMessageViewController: UIViewController {
             let tags = self.tagsText.text?.replacingOccurrences(of: " ", with: "").components(separatedBy: ",")
             let recipients = self.recipientsText.text?.replacingOccurrences(of: " ", with: "").components(separatedBy: ",")
             
-            
+            if(tags!.count > 0 && recipients!.count > 0 && (self.titleText.text?.characters.count)! > 0 && (self.bodyText.text?.characters.count)! > 0){
             self.database.child("messages").child(messageid).child("userid").setValue(self.uid)
             
             self.database.child("messages").child(messageid).child("messagetitle").setValue(self.titleText.text)
@@ -78,6 +78,11 @@ class CreateMessageViewController: UIViewController {
             self.database.child("messages").child(messageid).child("unixstamp").setValue(timestamp)
             
             self.navigationController?.popViewController(animated: true)
+            }else{
+                let error = UIAlertController(title: "Incomplete", message: "Parts of the form were incomplete. Please make sure that all fields are filled out properly.", preferredStyle: UIAlertControllerStyle.alert)
+                error.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(error, animated:true, completion: nil)
+            }
         }));
         
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))

@@ -35,7 +35,7 @@ class CreateGroupViewController: UIViewController {
     }
     
     @IBAction func createGroup(_ sender: AnyObject) {
-        let alert = UIAlertController(title: "Confirmation", message: "Are you sure you would like to create this thread?", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Confirmation", message: "Are you sure you would like to create this group?", preferredStyle: UIAlertControllerStyle.alert)
         
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in
             let group = self.database.child("groups").childByAutoId()
@@ -43,6 +43,7 @@ class CreateGroupViewController: UIViewController {
             
             let tags = self.groupTagsText.text?.replacingOccurrences(of: " ", with: "").components(separatedBy: ",")
             
+            if((tags?.count)! > 0 && (self.groupNameText.text?.characters.count)! > 0 && (self.groupidText.text?.characters.count)! > 0 && (self.groupDescriptionText.text?.characters.count)! > 0){
             self.database.child("groups").child(key).child("groupname").setValue(self.groupNameText.text)
             self.database.child("groups").child(key).child("groupscreenid").setValue(self.groupidText.text)
             self.database.child("groups").child(key).child("creatorid").setValue(self.uid)
@@ -58,6 +59,11 @@ class CreateGroupViewController: UIViewController {
             self.database.child("groups").child(key).child("unixstamp").setValue(timestamp)
             
             self.navigationController?.popViewController(animated: true)
+            }else{
+                let error = UIAlertController(title: "Incomplete", message: "Parts of the form were incomplete. Please make sure that all fields are filled out properly.", preferredStyle: UIAlertControllerStyle.alert)
+                error.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(error, animated:true, completion: nil)
+            }
         }));
         
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))

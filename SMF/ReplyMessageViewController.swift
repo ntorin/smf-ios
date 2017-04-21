@@ -36,12 +36,19 @@ class ReplyMessageViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in
             let post:FIRDatabaseReference = self.database.child("posts").child(self.threadid).childByAutoId()
             let postid = post.key
+            
+            if((self.bodyText.text?.characters.count)! > 0){
             self.database.child("posts").child(self.threadid).child(postid).child("userid").setValue(self.uid)
             self.database.child("posts").child(self.threadid).child(postid).child("content").setValue(self.bodyText.text)
             let timestamp = Int(Date().timeIntervalSince1970)
             self.database.child("posts").child(self.threadid).child(postid).child("unixstamp").setValue(timestamp)
             
             self.navigationController?.popViewController(animated: true)
+            }else{
+                let error = UIAlertController(title: "Incomplete", message: "Parts of the form were incomplete. Please make sure that all fields are filled out properly.", preferredStyle: UIAlertControllerStyle.alert)
+                error.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(error, animated:true, completion: nil)
+            }
         }));
         
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))

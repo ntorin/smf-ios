@@ -14,7 +14,7 @@ class ProfileUIViewController: UIViewController {
     
     
     @IBOutlet weak var screenid: UITextView!
-    @IBOutlet weak var accountid: UITextView!
+    @IBOutlet weak var accountid: UILabel!
     @IBOutlet weak var accountdescription: UITextView!
     
     
@@ -39,16 +39,16 @@ class ProfileUIViewController: UIViewController {
         
         
         self.database.child("users").child(uid!).observeSingleEvent(of: .value, with: {snapshot in
-            self.screenid.text = snapshot.childSnapshot(forPath: "screenname").value as! String
-            self.accountid.text = snapshot.childSnapshot(forPath: "accountid").value as! String
-            self.accountdescription.text = snapshot.childSnapshot(forPath: "shortdescription").value as! String
+            self.screenid.text = snapshot.childSnapshot(forPath: "screenname").value as? String
+            self.accountid.text = snapshot.childSnapshot(forPath: "accountid").value as? String
+            self.accountdescription.text = snapshot.childSnapshot(forPath: "shortdescription").value as? String
         })
         
-        /*self.database.child("users").child(uid!).observe(FIRDataEventType.childChanged, with: {snapshot in
-            self.screenid.text = snapshot.childSnapshot(forPath: "screenname").value as! String
-            self.accountid.text = snapshot.childSnapshot(forPath: "accountid").value as! String
-            self.accountdescription.text = snapshot.childSnapshot(forPath: "shortdescription").value as! String
-        }) */
+        self.database.child("users").child(uid!).observe(FIRDataEventType.value, with: {snapshot in
+            self.screenid.text = snapshot.childSnapshot(forPath: "screenname").value as? String
+            self.accountid.text = snapshot.childSnapshot(forPath: "accountid").value as? String
+            self.accountdescription.text = snapshot.childSnapshot(forPath: "shortdescription").value as? String
+        })
     }
     
     override func didReceiveMemoryWarning() {

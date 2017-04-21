@@ -44,6 +44,7 @@ class CreateThreadViewController: UIViewController {
             let threadid:String = thread.key
             let tags = self.tagsText.text?.replacingOccurrences(of: " ", with: "").components(separatedBy: ",")
             
+            if((tags?.count)! > 0 && (self.titleText.text?.characters.count)! > 0 && (self.bodyText.text?.characters.count)! > 0){
             self.database.child("threads").child(threadid).child("userid").setValue(self.uid)
             self.database.child("threads").child(threadid).child("threadtitle").setValue(self.titleText.text)
             
@@ -61,6 +62,11 @@ class CreateThreadViewController: UIViewController {
             self.database.child("posts").child(threadid).child(postid).child("unixstamp").setValue(timestamp)
             
             self.navigationController?.popViewController(animated: true)
+            }else{
+                let error = UIAlertController(title: "Incomplete", message: "Parts of the form were incomplete. Please make sure that all fields are filled out properly.", preferredStyle: UIAlertControllerStyle.alert)
+                error.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(error, animated:true, completion: nil)
+            }
         }));
         
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
